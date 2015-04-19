@@ -10,13 +10,13 @@ This repository provide a base to a PHP application with push notifications prov
 # install
 
 1. clone the project
-2. run `composer insall`
-3. run `mv .env.example .en`
-4. Open the .env file and update the APP_KEY and databases information
+2. run `composer install`
+3. run `mv .env.example .env`
+4. Open the .env file and update the APP_KEY and database information
 5. Create a MySQL database 
 6. run `php artisan migrate` to create tables
-7. run `npm install`
+7. run `npm install` to install nodejs vendor (Express and socket.io)
 8. run `npm start` to launch the push server
-9. head over `http://localhost:8000` and enjoy !
+9. head over to `http://localhost:8000` and enjoy !
 
 
