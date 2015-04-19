@@ -13,7 +13,7 @@ class MessagesController extends Controller
 
     function __construct()
     {
-        $this->client = new Client(new Version1X("http://tutopushnotifications.herokuapp.com:8346"));
+        $this->client = new Client(new Version1X("http://10.10.2.2:5000"));
         $this->logger = app('Psr\Log\LoggerInterface');
     }
 
