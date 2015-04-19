@@ -1,5 +1,5 @@
 /lumen.log
 /vendor
 .env
-/public/node_modules
+/node_modules
 .idea
