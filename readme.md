@@ -1,5 +1,8 @@
 # Tutorial push notifications
 
+demo :   
+tutorial (FR) : 
+
 This repository provides a base code to a PHP application with push notifications provided by socket.io.
 
 # Technologies
