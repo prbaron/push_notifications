@@ -1,6 +1,6 @@
 # Tutorial push notifications
 
-This repository provide a base to a PHP application with push notifications provided by socket.io.
+This repository provides a base code to a PHP application with push notifications provided by socket.io.
 
 # Technologies
  - *server* : Lumen
