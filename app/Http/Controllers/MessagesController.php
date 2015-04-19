@@ -13,7 +13,7 @@ class MessagesController extends Controller
 
     function __construct()
     {
-        $this->client = new Client(new Version1X("http://tutopushnotifications.herokuapp.com:8346"));
+        $this->client = new Client(new Version1X("https://arato-push.herokuapp.com"));
         $this->logger = app('Psr\Log\LoggerInterface');
     }
 
@@ -30,7 +30,7 @@ class MessagesController extends Controller
         $createdMessage = Message::create($inputs);
         if ($createdMessage) {
 
-            $this->emit('php.message.created', $createdMessage->toArray());
+            $this->emit('php.alert.created', $createdMessage->toArray());
 
             return response()->json($createdMessage->toArray(), 201, []);
         }
@@ -45,7 +45,7 @@ class MessagesController extends Controller
         if ($updated) {
             $updatedMessage = Message::find($id);
 
-            emit('php.message.updated', $updatedMessage->toArray());
+            emit('php.alert.updated', $updatedMessage->toArray());
 
             return response()->json($updatedMessage->toArray(), 201, []);
         }
@@ -58,7 +58,7 @@ class MessagesController extends Controller
     {
         $deletedMessage = Message::find($id);
         if ($deletedMessage->delete()) {
-            $this->emit('php.message.deleted', $deletedMessage->toArray());
+            $this->emit('php.alert.deleted', $deletedMessage->toArray());
 
             return response()->json("", 204, []);
         }

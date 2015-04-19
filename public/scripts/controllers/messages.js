@@ -10,21 +10,22 @@
     function MessagesCtrl($http, $scope) {
         /* jshint validthis: true */
         var vm = this;
-        var socket = io.connect("http://tutopushnotifications.herokuapp.com:8346");
+        var socket = io.connect("https://arato-push.herokuapp.com");
 
         vm.activate = activate;
         vm.submitForm = submitForm;
 
         activate();
 
-        socket.on('message.created', function (notification) {
+        socket.on('alert.created', function (notification) {
+            console.log('alert.created', notification);
             $scope.$apply(function () {
                 vm.messages.push(notification);
             });
         });
 
-        socket.on('message.updated', function (notification) {
-            console.log('message.updated', notification);
+        socket.on('alert.updated', function (notification) {
+            console.log('alert.updated', notification);
             $scope.$apply(function () {
                 var index = vm.messages.findIndex(function (m) {
                     return m.id === notification.id;
@@ -35,8 +36,8 @@
             });
         });
 
-        socket.on('message.deleted', function (notification) {
-            console.log('message.deleted', notification);
+        socket.on('alert.deleted', function (notification) {
+            console.log('alert.deleted', notification);
             $scope.$apply(function () {
                 var index = vm.messages.findIndex(function (m) {
                     return m.id === notification.id;
