@@ -32,5 +32,10 @@
   },
   "config": {
     "preferred-install": "dist"
-  }
+  },
+  "scripts": {
+		"compile": [
+			"npm start"
+		]
+	}
 }
