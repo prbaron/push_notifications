@@ -10,7 +10,7 @@
     function MessagesCtrl($http, $scope) {
         /* jshint validthis: true */
         var vm = this;
-        var socket = io.connect("http://localhost:8346");
+        var socket = io.connect("http://tutopushnotifications.herokuapp.com:8346");
 
         vm.activate = activate;
         vm.submitForm = submitForm;
