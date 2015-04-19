@@ -1,17 +1,22 @@
-## Lumen PHP Framework
+# Tutorial push notifications
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/downloads.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+This repository provide a base to a PHP application with push notifications provided by socket.io.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# Technologies
+ - *server* : Lumen
+ - *push* : socket.io + elephant.io (socket.io PHP library)
+ - *client* : AngularJS
 
-## Official Documentation
+# install
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+1. clone the project
+2. run `composer insall`
+3. run `mv .env.example .en`
+4. Open the .env file and update the APP_KEY and databases information
+5. Create a MySQL database 
+6. run `php artisan migrate` to create tables
+7. run `npm install`
+8. run `npm start` to launch the push server
+9. head over `http://localhost:8000` and enjoy !
 
-### License
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
