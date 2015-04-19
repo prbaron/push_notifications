@@ -13,7 +13,7 @@ class MessagesController extends Controller
 
     function __construct()
     {
-        $this->client = new Client(new Version1X("http://10.0.2.2:5000"));
+        $this->client = new Client(new Version1X("http://localhost:8346"));
         $this->logger = app('Psr\Log\LoggerInterface');
     }
 
