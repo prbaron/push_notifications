@@ -1,6 +1,6 @@
 # Tutorial push notifications
 
-demo :  [https://tutopushnotifications.herokuapp.com/](https://tutopushnotifications.herokuapp.com/) 
+demo :  [https://tutopushnotifications.herokuapp.com/](https://tutopushnotifications.herokuapp.com/)   
 tutorial (FR) : [http://pierrebaron.fr/blog/push-notification-php-nodejs/](http://pierrebaron.fr/blog/push-notification-php-nodejs/)
 
 This repository provides a base code to a PHP application with push notifications provided by socket.io.
