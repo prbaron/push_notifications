@@ -26,6 +26,7 @@
         <div class="col-sm-8">
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="message in ctrl.messages | orderBy:'-id'">
+                    <small>{{message.created_at | date:'dd/MM/yyyy HH:mm'}}</small>
                     <strong class="list-group-item-heading">{{message.author}}</strong>
 
                     <p class="list-group-item-text">{{message.content}}</p>
